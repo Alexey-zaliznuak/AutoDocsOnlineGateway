@@ -39,13 +39,6 @@ jobs:
           sudo docker compose -f docker-compose.production.yml down
           sudo docker compose -f docker-compose.production.yml up -d
 
-          # Make migrations
-          sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
-
-          # load base data
-          sudo docker compose -f docker-compose.production.yml exec backend python manage.py createsuperuser --noinput
-          sudo docker compose -f docker-compose.production.yml exec backend python manage.py load -i -t
-
           # clear
           sudo docker system prune --all --force
 
