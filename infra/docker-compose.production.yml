@@ -5,7 +5,6 @@ volumes:
   static:
 
 services:
-
   # Postgres container
   db:
     image: postgres:13.10
