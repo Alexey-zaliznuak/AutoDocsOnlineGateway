@@ -25,6 +25,9 @@ services:
   frontend:
     image: maxiq/auto_docs_online_frontend
     env_file: ../.env
+    command: |
+      npm run build
+      && cp -r build result_build
     volumes:
       - static:/app/result_build/build
 
