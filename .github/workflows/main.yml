@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         source: "./infra/"
-        target: "AutoDocsOnline/"
+        target: "/AutoDocsOnline"
 
     - name: Executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
